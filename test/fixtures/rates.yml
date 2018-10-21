@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  startCity: MyString
+  endCity: MyString
+  date: 2018-10-21 11:02:51
+  price: 1
+  comment: MyString
+
+two:
+  startCity: MyString
+  endCity: MyString
+  date: 2018-10-21 11:02:51
+  price: 1
+  comment: MyString
