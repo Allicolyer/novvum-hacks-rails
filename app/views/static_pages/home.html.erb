@@ -1,0 +1,35 @@
+<% provide(:title, 'Home')%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+
+  <div class="center jumbotron">
+    <h1>Novvum-Hacks</h1>
+    <h2> This is the home page for the sample application. </h2>
+  </div>
+
+   <div class="container m-3" id="rates">
+    <form class="drayForm" id="ratesForm">
+      <label for="portLocation">Port Location: </label>
+      <select >
+        <option value="portLocation">Port of LA/LB</option>
+      </select><br>
+      <label for="port-location">Dray Location: </label>
+      <input type="text" name="drayLocation" placeholder="Some SoCal City" id="drayLocation"><br>
+     </form>
+      <button id="submit">Submit</button>
+
+  </div>
+
+  <div class="container m-3" id="ratesOutput">
+      <h3>Drayage Rate</h3>
+      <p>Rates go here.</p>
+    </div>
+  </div>
+
+
+  </body>
+</html>
