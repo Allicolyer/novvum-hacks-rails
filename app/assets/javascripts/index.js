@@ -86,5 +86,5 @@ $('document').ready(function(){
       drayLocation.value = ""; //clears input
       rateRequest(city); //runs program
     });
-}
+  }
 });
