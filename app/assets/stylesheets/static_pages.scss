@@ -1,3 +1,19 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#home-banner {
+  background: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
+  url('http://www.randomlengthsnews.com/wp-content/uploads/2015/07/Yusen_Terminal_low-res.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:#ffffff;
+
+}
+
+#home-text {
+  color:#ffffff;
+
+}

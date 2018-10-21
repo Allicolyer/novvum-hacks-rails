@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Startcity:</strong>
+  <strong>Port Location:</strong>
   <%= @rate.startCity %>
 </p>
 
 <p>
-  <strong>Endcity:</strong>
+  <strong>Dray Location:</strong>
   <%= @rate.endCity %>
 </p>
 
 <p>
   <strong>Date:</strong>
-  <%= @rate.date %>
+  <%= @rate.date.to_date %>
 </p>
 
 <p>
@@ -25,5 +25,4 @@
   <%= @rate.comment %>
 </p>
 
-<%= link_to 'Edit', edit_rate_path(@rate) %> |
 <%= link_to 'Back', rates_path %>
