@@ -13797,3 +13797,761 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 238ms (Views: 234.9ms | ActiveRecord: 0.0ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRates (20181021175857)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "rates" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "startCity" varchar, "endCity" varchar, "date" datetime, "price" integer, "comment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181021175857"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for ::1 at 2018-10-21 11:32:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 422ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "": expected selector or at-rule, was "/*"):
+    4:     <title><%= full_title(yield(:title))%></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= render 'layouts/rails_default' %>
+   10:     <%= render 'layouts/shim' %>
+  
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__6949539397285093_70100908563440'
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.8ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (123.1ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (696.5ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (834.9ms)
+Started GET "/" for ::1 at 2018-10-21 11:33:09 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "@import ": expected file to import (string or url()), was "‘bootstrap’"):
+    4:     <title><%= full_title(yield(:title))%></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= render 'layouts/rails_default' %>
+   10:     <%= render 'layouts/shim' %>
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__6949539397285093_70100936122620'
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (127.9ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (117.8ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (236.2ms)
+Started GET "/" for ::1 at 2018-10-21 11:34:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 689ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets"": expected selector or at-rule, was "@import "bootst..."):
+    4:     <title><%= full_title(yield(:title))%></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= render 'layouts/rails_default' %>
+   10:     <%= render 'layouts/shim' %>
+  
+app/assets/stylesheets/application.scss:17
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__6949539397285093_70100897943140'
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (129.1ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (679.8ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (782.1ms)
+Started GET "/" for ::1 at 2018-10-21 11:36:55 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 2001ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (CssSyntaxError: /Users/allisoncolyer/Workspace/novvum-hacks-rails/app/assets/stylesheets/application.css:1:1: Unclosed comment
+
+> 1 | /*
+    | ^
+  2 |  * This is a manifest file that'll be compiled into application.css, which will include all the files
+  3 |  * listed below.
+):
+    4:     <title><%= full_title(yield(:title))%></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= render 'layouts/rails_default' %>
+   10:     <%= render 'layouts/shim' %>
+  
+apply.env (eval at <anonymous> ((execjs):34150:8), <anonymous>:1:39)
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__6949539397285093_70100946641540'
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.3ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (128.0ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (114.5ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (215.5ms)
+Started GET "/" for ::1 at 2018-10-21 11:37:10 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 1108ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (CssSyntaxError: /Users/allisoncolyer/Workspace/novvum-hacks-rails/app/assets/stylesheets/application.css:1:1: Unclosed comment
+
+> 1 | /*
+    | ^
+  2 |  * This is a manifest file that'll be compiled into application.css, which will include all the files
+  3 |  * listed below.
+):
+    4:     <title><%= full_title(yield(:title))%></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= render 'layouts/rails_default' %>
+   10:     <%= render 'layouts/shim' %>
+  
+apply.env (eval at <anonymous> ((execjs):34150:8), <anonymous>:1:39)
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__6949539397285093_70100936826940'
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.3ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (107.4ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (206.0ms)
+Started GET "/" for ::1 at 2018-10-21 11:37:15 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 586ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (CssSyntaxError: /Users/allisoncolyer/Workspace/novvum-hacks-rails/app/assets/stylesheets/application.css:1:1: Unclosed comment
+
+> 1 | /*
+    | ^
+  2 |  * This is a manifest file that'll be compiled into application.css, which will include all the files
+  3 |  * listed below.
+):
+    4:     <title><%= full_title(yield(:title))%></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= render 'layouts/rails_default' %>
+   10:     <%= render 'layouts/shim' %>
+  
+apply.env (eval at <anonymous> ((execjs):34150:8), <anonymous>:1:39)
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__6949539397285093_70100911493440'
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (28.6ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (174.9ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (101.4ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (214.8ms)
+Started GET "/" for ::1 at 2018-10-21 11:37:27 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery3' with type 'text/css'
+Checked in these paths: 
+  /Users/allisoncolyer/Workspace/novvum-hacks-rails/app/assets/config
+  /Users/allisoncolyer/Workspace/novvum-hacks-rails/app/assets/images
+  /Users/allisoncolyer/Workspace/novvum-hacks-rails/app/assets/javascripts
+  /Users/allisoncolyer/Workspace/novvum-hacks-rails/app/assets/stylesheets
+  /Users/allisoncolyer/Workspace/novvum-hacks-rails/vendor/assets/javascripts
+  /Users/allisoncolyer/Workspace/novvum-hacks-rails/vendor/assets/stylesheets
+  /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts
+  /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actioncable-5.0.1/lib/assets/compiled
+  /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets
+  /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/bootstrap-sass-3.3.6/assets/javascripts
+  /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/bootstrap-sass-3.3.6/assets/fonts
+  /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/bootstrap-sass-3.3.6/assets/images
+  /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets
+  /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/bootstrap-sass-3.3.6/assets/javascripts
+  /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/popper_js-1.11.1/assets/javascripts):
+    4:     <title><%= full_title(yield(:title))%></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= render 'layouts/rails_default' %>
+   10:     <%= render 'layouts/shim' %>
+  
+app/assets/stylesheets/application.css:14
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__6949539397285093_70100911084740'
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (123.7ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (119.7ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (216.2ms)
+Started GET "/" for ::1 at 2018-10-21 11:38:03 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 1739ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (CssSyntaxError: /Users/allisoncolyer/Workspace/novvum-hacks-rails/app/assets/stylesheets/application.css:1:1: Unclosed comment
+
+> 1 | /*
+    | ^
+  2 |  * This is a manifest file that'll be compiled into application.css, which will include all the files
+  3 |  * listed below.
+):
+    4:     <title><%= full_title(yield(:title))%></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= render 'layouts/rails_default' %>
+   10:     <%= render 'layouts/shim' %>
+  
+apply.env (eval at <anonymous> ((execjs):34150:8), <anonymous>:1:39)
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__6949539397285093_70100936221780'
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.8ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (126.2ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (115.9ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (238.5ms)
+Started GET "/" for ::1 at 2018-10-21 11:38:56 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (13.3ms)
+Started GET "/" for ::1 at 2018-10-21 11:39:05 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_rails_default.html.erb (1.5ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 2707ms (Views: 2683.6ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_rails_default.html.erb (0.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 12560ms (Views: 12544.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:39:10 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (6.0ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (32.6ms)
+  Rendered layouts/_rails_default.html.erb (4.2ms)
+  Rendered layouts/_shim.html.erb (2.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 310ms (Views: 285.8ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for ::1 at 2018-10-21 11:41:52 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_rails_default.html.erb (0.7ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 248ms (Views: 232.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:41:54 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (2.2ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (32.1ms)
+  Rendered layouts/_rails_default.html.erb (0.5ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 252ms (Views: 240.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:42:52 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (6.1ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (40.8ms)
+  Rendered layouts/_rails_default.html.erb (0.8ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 307ms (Views: 282.4ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:43:22 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (3.2ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (104.1ms)
+  Rendered layouts/_rails_default.html.erb (0.4ms)
+  Rendered layouts/_shim.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 423ms (Views: 355.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:43:33 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (0.2ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (39.6ms)
+  Rendered layouts/_rails_default.html.erb (0.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 206ms (Views: 199.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:43:36 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (0.2ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_rails_default.html.erb (0.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 116ms (Views: 112.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:43:38 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (0.2ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_rails_default.html.erb (0.6ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 99ms (Views: 96.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:43:42 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (0.2ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_rails_default.html.erb (0.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 82ms (Views: 79.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:44:01 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (0.2ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_rails_default.html.erb (0.7ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 94ms (Views: 90.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2018-10-21 11:44:44 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_rails_default.html.erb (1.0ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 287ms (Views: 261.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:44:46 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (2.9ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (71.2ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `parse' for Fri, 12 Oct 2018 07:14:00 UTC +00:00:Time):
+    26:       <tr>
+    27:         <td><%= rate.startCity %></td>
+    28:         <td><%= rate.endCity %></td>
+    29:         <td><%= rate.date.parse %></td>
+    30:         <td>$<%= rate.price %></td>
+    31:         <td><%= rate.comment %></td>
+    32:         <td><%= link_to 'Show', rate %></td>
+  
+app/views/rates/index.html.erb:29:in `block in _app_views_rates_index_html_erb__4459231423156837125_70100878442440'
+app/views/rates/index.html.erb:25:in `_app_views_rates_index_html_erb__4459231423156837125_70100878442440'
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (143.3ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (117.1ms)
+  Rendering /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/allisoncolyer/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (248.6ms)
+Started GET "/rates" for ::1 at 2018-10-21 11:44:55 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (0.3ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_rails_default.html.erb (0.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 177ms (Views: 174.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2018-10-21 11:46:42 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_rails_default.html.erb (0.6ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (8.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 275ms (Views: 259.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:46:45 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (2.3ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (94.1ms)
+  Rendered layouts/_rails_default.html.erb (0.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 351ms (Views: 340.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:47:01 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (0.4ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_rails_default.html.erb (0.7ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 180ms (Views: 171.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rates/1" for ::1 at 2018-10-21 11:47:06 -0700
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRate Load (1.1ms)[0m  [1m[34mSELECT  "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rates/show.html.erb within layouts/application
+  Rendered rates/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_rails_default.html.erb (1.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 343ms (Views: 111.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:47:15 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (0.3ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_rails_default.html.erb (0.5ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 113ms (Views: 100.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:47:26 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (0.5ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_rails_default.html.erb (0.7ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 245ms (Views: 241.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2018-10-21 11:47:33 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (45.2ms)
+  Rendered layouts/_rails_default.html.erb (0.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 321ms (Views: 314.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-10-21 11:47:42 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_rails_default.html.erb (0.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 126ms (Views: 121.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-10-21 11:47:43 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_rails_default.html.erb (0.9ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 170ms (Views: 167.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:47:45 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (0.9ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_rails_default.html.erb (0.7ms)
+  Rendered layouts/_shim.html.erb (4.2ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 282ms (Views: 272.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/about" for ::1 at 2018-10-21 11:47:46 -0700
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_rails_default.html.erb (0.6ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 267ms (Views: 258.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2018-10-21 11:47:53 -0700
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_rails_default.html.erb (0.5ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 256ms (Views: 249.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rates" for ::1 at 2018-10-21 11:48:22 -0700
+Processing by RatesController#index as HTML
+  Rendering rates/index.html.erb within layouts/application
+  [1m[36mRate Load (6.6ms)[0m  [1m[34mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (91.6ms)
+  Rendered layouts/_rails_default.html.erb (0.9ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 436ms (Views: 406.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for ::1 at 2018-10-21 11:48:34 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_rails_default.html.erb (0.7ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (64.4ms)
+Completed 200 OK in 368ms (Views: 358.9ms | ActiveRecord: 0.0ms)
+
+
