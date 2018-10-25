@@ -19,6 +19,7 @@ function rateRequest(city){//main program
 
 //create function to check list for dray Location city
 function searchList(city){ //takes city name
+  var cityFound;
   let cityFound = false;
   for (let i = 0; i < cityMiles.length; i++) { //iterates for city through list
     if(city.toLowerCase()===cityMiles[i].city.toLowerCase()){ //if drayLocation is found
