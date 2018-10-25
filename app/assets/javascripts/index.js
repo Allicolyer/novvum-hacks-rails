@@ -19,9 +19,8 @@ function rateRequest(city){//main program
 
 //create function to check list for dray Location city
 function searchList(city){ //takes city name
-  var cityFound;
-  let cityFound = false;
-  for (let i = 0; i < cityMiles.length; i++) { //iterates for city through list
+  var cityFound = false;
+  for (var i = 0; i < cityMiles.length; i++) { //iterates for city through list
     if(city.toLowerCase()===cityMiles[i].city.toLowerCase()){ //if drayLocation is found
       cityFound = true; //flags cityFound as true
       return cityMiles[i].miles; //
@@ -46,7 +45,7 @@ function calculateFsc(rate){
 }
 
 function rateText(city, rate, fsc){
-  let message = "";
+  var message = "";
   message+="<p>Thank you for using our drayage rate calculator.</p>";
   message+="<p>See below drayage rate from the Ports of LA/LB to "+city+", CA.</p>";
   message+="<p>Base rate: $"+rate+", FSC @ 25%: $"+fsc+". Same day pickup/delivery, legal size/weight, non-hazardous.</p>";
@@ -54,8 +53,8 @@ function rateText(city, rate, fsc){
 }
 
 function accessorialText(accessorials){
-  let message = "<ul>";
-  for(let i=0;i<accessorials.length;i+=1){
+  var message = "<ul>";
+  for(var i=0;i<accessorials.length;i+=1){
     message+="<li>"+accessorials[i].name+": $"+accessorials[i].rate+", "+accessorials[i].description+"</li>"
   }
   message+="</ul>";
