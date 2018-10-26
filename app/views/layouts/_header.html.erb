@@ -1,11 +1,10 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-  <%= link_to "Honest Quotes", about_path, id: "logo" %>
+  <%= link_to "Honest Quotes", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Calculator", root_path %></li>
+        <li><%= link_to "Calculator", calculator_path %></li>
         <li><%= link_to "View Rates", rates_path %></li>
-        <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Contact",  contact_path %></li>
       </ul>
     </nav>
